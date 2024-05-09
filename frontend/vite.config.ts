@@ -14,7 +14,7 @@ export default defineConfig({
 
     proxy: {
 
-      "/api": {
+      "/Event": {
 
         target: "http://localhost:8080",
 
