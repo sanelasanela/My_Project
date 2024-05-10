@@ -2,10 +2,14 @@ import './HomeCSS.css';
 import Info from "./Info.tsx";
 import EventLogo from '/event.svg'
 import pictureLogo from "/picture.svg";
+import {Link} from "react-router-dom";
 
 function Home() {
     return (
         <>
+            <div>
+                <h2>Welcome!</h2>
+            </div>
             <div>
                 <a href="https://www.eventbrite.de/" target="_blank">
                     <img src={EventLogo} className="logo" alt="Event logo"/>
@@ -24,9 +28,14 @@ function Home() {
                 </p>
             </div>
             <p className="read-the-docs">
-                Click on the Event Page and Event picture to learn more!
+                Click on the "Event Page and Event picture to learn more about Events!
+                Click on the link "Go to Events..." to see list of events!
             </p>
+            <div>
+                <Link to="/events">Go to Events... </Link>
+            </div>
         </>
     )
 }
+
 export default Home;
