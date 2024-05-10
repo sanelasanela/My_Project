@@ -1,34 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import pictureLogo from '/picture.svg'
+
+import EventLogo from '/event.svg'
 import './App.css'
+import Info from "./components/Info.tsx";
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <>
+
+          <div>
+              <a href="https://www.eventbrite.de/" target="_blank">
+                  <img src={EventLogo} className="logo" alt="Event logo"/>
+              </a>
+              <a href="https://uploads.sarvgyan.com/2014/08/event-management.jpg" target="_blank">
+                  <img src={pictureLogo} className="logo picture" alt="Picture logo"/>
+              </a>
+          </div>
+          <h1>Event Page & Event picture</h1>
+          <div>
+              <Info/>
+          </div>
+          <div className="card">
+              <p>
+                  <h2> Have a fun!</h2>
+              </p>
+          </div>
+          <p className="read-the-docs">
+              Click on the Event Page and Event picture to learn more!
+          </p>
+      </>
   )
 }
 

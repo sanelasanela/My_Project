@@ -1,0 +1,9 @@
+.EventListe {
+    display: flex;
+    justify-content: center; /* Zentriere horizontal */
+    align-items: center; /* Zentriere vertikal */
+    height: 100vh; /* Setze die Höhe auf 100% der Bildschirmhöhe */
+}
+
+
+
