@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import axios from 'axios';
 import {Event} from "../Event.ts";
 import EventCard from "./EventCard.tsx";
+import {Link} from "react-router-dom";
 
 function Events() {
 
@@ -26,8 +27,11 @@ function Events() {
             <h1>Events Page</h1>
             <div className="RestListe">
                 {
-                    event.map(element=> <EventCard event={element}/> )
+                    event.map(element => <EventCard event={element}/>)
                 }
+            </div>
+            <div>
+                <Link to="/">Go to Home Page</Link>
             </div>
         </div>
     );
