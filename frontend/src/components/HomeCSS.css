@@ -1,9 +1,76 @@
-.EventListe {
-    display: flex;
-    justify-content: center; /* Zentriere horizontal */
-    align-items: center; /* Zentriere vertikal */
-    height: 100vh; /* Setze die Höhe auf 100% der Bildschirmhöhe */
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
 }
 
+.logo {
+    height: 15em;
+    padding: 1.7em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 8em #f674ff);
+}
+.logo.react:hover {
+    filter: drop-shadow(0 0 8em #27144d);
+}
 
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+.card {
+    padding: 2em;
+    color: darkred;
+}
+
+.read-the-docs {
+    color: #ffffff;
+    background-color: #e3669e;
+}
+button {
+    border-radius: 20px;
+    border: none; /* Entferne die Border */
+    padding: 0.6em 1.2em;
+    font-size: 2em;
+    font-weight: 500;
+    font-family: inherit;
+    color: #e3669e; /* Ändere die Textfarbe */
+    background-color: rgb(18, 105, 20); /* Ändere die Hintergrundfarbe */
+    box-shadow: 0 2px 4px rgb(14, 192, 17); /* Füge einen Schatten hinzu */
+    cursor: pointer;
+    transition: background-color 0.25s, box-shadow 0.25s;
+}
+
+button:hover {
+    background-color: rgb(225, 223, 86);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes background-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    background-color: #c0ff74;
+    background: linear-gradient(to  left, #ffdf74, #e3669e, #c0ff74, #ffffff);
+    background-size: 200% auto;
+    animation: background-animation 10s infinite ease-in-out;
+}

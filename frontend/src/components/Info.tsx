@@ -1,4 +1,4 @@
-
+import './HomeCSS.css';
 import {useState} from "react"; // CSS für das Styling der Info
 
 function Info() {
