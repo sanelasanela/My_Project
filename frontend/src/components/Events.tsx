@@ -5,7 +5,6 @@ import EventCard from "./EventCard.tsx";
 
 function Events() {
 
-
     const [event, setEvent] = useState<Event[]>()
 
     useEffect(() => {
@@ -18,19 +17,15 @@ function Events() {
     )
 
     if(!event){
-        return "Lade..."
+        return " Loading..."
     }
-
-
 
 
     return (
         <div>
             <h1>Events Page</h1>
             <div className="RestListe">
-
                 {
-
                     event.map(element=> <EventCard event={element}/> )
                 }
             </div>
