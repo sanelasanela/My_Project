@@ -28,8 +28,8 @@ function Home() {
                 </p>
             </div>
             <p className="read-the-docs">
-                Click on the "Event Page and Event picture to learn more about Events!
-                Click on the link "Go to Events Page" to see list of events!
+                * Click on the "Event Page and Event picture to learn more about Events!
+                Click on the link "Go to Events Page" to see list of events! *
             </p>
             <div>
                 <Link to="/events">Go to Events Page</Link>
