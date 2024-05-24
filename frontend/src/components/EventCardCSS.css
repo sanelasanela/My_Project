@@ -1,18 +1,21 @@
-.eventcard{
+
+.eventcard {
     color: azure;
-    border : 2px solid black;
-    border-radius: 15px;
-    margin: 10px;
+    border: 1px solid black;
     padding: 10px;
-    display: flex;
+    margin: 10px;
+    border-radius: 5px;
     background-color: #e3669e;
-    font-style: italic;
-    font-size: large;
-    flex-direction: column;
-    place-self: center;
-    position: relative;
-    top: 50%;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+.eventcard h5 {
+    margin: 0 0 10px;
+}
+
+.eventcard p {
+    margin: 5px 0;
+}
+
+.eventcard h4 {
+    margin: 10px 0;
 }

@@ -2,6 +2,7 @@ import "./EventCardCSS.css"
 import {Event} from "../Event.ts";
 import {useState} from "react";
 
+
 type Props = {
     event : Event,
 }
