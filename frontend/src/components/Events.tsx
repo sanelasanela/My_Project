@@ -25,7 +25,12 @@ function Events() {
     };
 
     if (!events.length) {
-        return "Loading...";
+        return (
+            <div>
+                <p><h1>Your search did not match any results!</h1></p>
+                <Link to="/">Go to Home Page</Link>
+            </div>
+        );
     }
 
     return (
