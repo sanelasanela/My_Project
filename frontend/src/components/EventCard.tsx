@@ -4,10 +4,12 @@ import {useState} from "react";
 
 
 type Props = {
-    event : Event,
+    event : Event;
 }
 
 function EventCard( props : Props) {
+
+
 
     const [hovered, setHovered] = useState(false);
 
