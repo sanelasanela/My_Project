@@ -18,24 +18,14 @@ function Events() {
         fetchEvents();
     }, []);
     const fetchEvents = () => {
-        setIsLoading(true); // Postavite indikator učitavanja na true prilikom učitavanja događaja
+        setIsLoading(true);
         axios.get("/Event/allEvents")
             .then(response => {
                 setEvents(response.data);
             })
             .catch(error => console.error('Error loading events:', error))
-            .finally(() => setIsLoading(false)); // Bez obzira na rezultat, postavite indikator učitavanja na false
+            .finally(() => setIsLoading(false));
     };
-/*
-    useEffect(() => {
-        axios.get("/Event/allEvents")
-            .then(response => {
-                setEvents(response.data);
-           //     setFilteredEvents(response.data); // Start with all events
-            })
-            .catch(error => console.error('Fehler beim Laden der Events:', error));
-    }, []);
-*/
     const handleSearch = (result: Event[]) => {
     //    const filtered = events.filter(event => event.name.toLowerCase().includes(searchTerm.toLowerCase()));
         setEvents(result);
@@ -51,12 +41,10 @@ function Events() {
         axios.post("/Event/addEvent", newEvent)
             .then(response => {
                 console.log("New event added:", response.data);
-                // Nakon dodavanja novog događaja, ponovo učitajte sve događaje
                 fetchEvents();
             })
             .catch(error => {
                 console.error('Error adding event:', error);
-                // Dodajte dodatnu logiku za hvatanje i obradu greške
             });
     };
     const handleDeleteEmptyEvents = () => {
@@ -65,17 +53,14 @@ function Events() {
             .filter(event => event.isEmpty)
             .map(event => event.index);
 
-        // Ažuriraj stanje: brisanje praznih događaja i ažuriranje prikazanog sadržaja
         const updatedEvents = events.map((event, i) => {
             if (emptyEventsIndexes.includes(i)) {
-                // Ako je događaj prazan, zameni ga sa novim objektom koji prikazuje samo pregled
                 return {
                     name: "Empty Event",
                     location: "Unknown",
                     review: event.review
                 };
             } else {
-                // Ako događaj nije prazan, vrati originalni događaj
                 return event;
             }
         });
