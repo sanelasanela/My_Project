@@ -83,9 +83,8 @@ function Events() {
 
         setEvents(updatedEvents);
 
-        // Obrisi prazne događaje sa servera
         emptyEventsIndexes.forEach(index => {
-            const id = events[index].id; // Pretpostavka da postoji polje name kao ime događaja
+            const id = events[index].id;
             handleDeleteEvent(id);
         });
     };
@@ -97,7 +96,6 @@ function Events() {
         axios.delete(`/Event/deleteEvent/${id}`)
             .then(() => {
                 console.log("Event deleted:", id);
-                // Nakon brisanja događaja, ponovo učitajte sve događaje
                 fetchEvents();
             })
             .catch(error => console.error('Error deleting event:', error.response.data));
@@ -130,7 +128,6 @@ function Events() {
                 )}
             </div>
             <div style = {{marginTop:"20px"}}>
-                {/* Dugme za brisanje praznih događaja */}
                 <button onClick={handleDeleteEmptyEvents}>Delete Empty Events</button>
             </div>
             <div>
