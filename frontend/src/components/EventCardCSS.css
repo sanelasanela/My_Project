@@ -1,0 +1,21 @@
+
+.eventcard {
+    color: azure;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #e3669e;
+}
+
+.eventcard h5 {
+    margin: 0 0 10px;
+}
+
+.eventcard p {
+    margin: 5px 0;
+}
+
+.eventcard h4 {
+    margin: 10px 0;
+}
